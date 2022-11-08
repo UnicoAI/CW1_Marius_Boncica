@@ -1,6 +1,14 @@
 
+/**
+ 
+ * @author     Marius Daniel Boncica Student Bucks New ID: 22045429
+ * @version    0.1 (2022.10.29)
+ * 
+ * Modified by Marius Boncica 01/11/2022
 
+ */
 public class Song { //create class song, declare attribute private
+    
     private String title;
     private String artist;
     private double playcount;
