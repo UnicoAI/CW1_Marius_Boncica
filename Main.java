@@ -1,7 +1,14 @@
 
 
 import java.util.*;
+/**
+ 
+ * @author     Marius Daniel Boncica Student Bucks New ID: 22045429
+ * @version    0.1 (2022.10.29)
+ * 
+ * Modified by Marius Boncica 01/11/2022
 
+ */
 public class Main {
 /**
  
@@ -211,8 +218,29 @@ public class Main {
        System.out.println("===================================================================================");
      
        printMenu();
+       case 9: //remove song by index number
+       Scanner newcount1 = new Scanner(System.in);
+                    System.out.println("What is the song number you wish to delete");
+                     int sssss = newcount1.nextInt();
+                    playList.remove(sssss);
+                    System.out.println("Song list number  " +sssss  + "  removed from playlist");
+                printMenu();
+        case 10: //upload new song to database
+        System.out.println("What is the song Title you wish to add?");
+        Scanner newaddt = new Scanner(System.in);
+        System.out.println("What is the song Artist Name you wish to add?");
+        Scanner newadda = new Scanner(System.in);
+        System.out.println("What is the song Plays you wish to add?");
+        Scanner newaddp = new Scanner(System.in);
+        Song newa = new Song(newaddt.nextLine(), newadda.nextLine(), newaddp.nextDouble());
+        playList.add(newa);
+        printList(playList);
+        printMenu();
+        System.out.println(newa.toString() +"\n" + "Added to the playlist");
+
                 }
-            }
+                }
+          
         }
     
 
@@ -233,9 +261,12 @@ public class Main {
                 "||     4 - Print Playlist                                                        ||\n"+
                 "||     5 - MENU                                                                  ||\n"+
                 "||     6 - Find And Play A Playlist By the Play Count Number                     ||\n" +
-                "||     7 - Delete Current Song                                                    ||\n" +
-                "||     8 - Add New Song                                                          ||\n"
-               );
+                "||     7 - Delete Current Song                                                   ||\n" +
+                "||     8 - Add New Song                                                          ||\n" +
+                "||     9 - Remove Song By index Number                                           ||\n" +
+                "||     10 - Upload New Song                                                      ||\n"
+              
+                );
                 System.out.println(
              "===================================================================================");
     }
