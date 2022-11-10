@@ -11,11 +11,11 @@ public class Song { //create class song, declare attribute private
     
     private String title;
     private String artist;
-    private double playcount;
+    private int playcount;
    
 
     //create constructors
-    public Song(String title, String artist, double playcount) {
+    public Song(String title, String artist, int playcount) {
         this.title = title;
         this.artist = artist;
         this.playcount = playcount;
@@ -34,7 +34,7 @@ public class Song { //create class song, declare attribute private
         return artist;
     }
 
-    public Double getPlaycount(){
+    public  int getPlaycount(){
         return playcount;
     }
     //override tostring method to print values of objects instead of allocated storage memory index
