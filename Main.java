@@ -158,18 +158,18 @@ public class Main {
                     case 6: // searching for playcount number
                     Scanner newcount = new Scanner(System.in);
                     System.out.println("What number of PlayCount are you looking for?");
-                     Double ssss = newcount.nextDouble();
+                     int ssss = newcount.nextInt();
                     
 
-                     for(Song checkedSong : playList){
-            if (checkedSong.getPlaycount().equals(ssss)){
+                     for(Song Song: playList){
+            if (Song.getPlaycount() == ssss){
              
-                       System.out.println(ssss + "  is the Play Count number for  " + checkedSong.getTitle() + " --Arrtist Name--" + checkedSong.getArtist());
+                       System.out.println(ssss + "  is the Play Count number for  " + Song.getTitle() + " --Arrtist Name--" + Song.getArtist());
                        System.out.println("===================================================================================");
                        for (int index = 0; index < playList.size(); index++)
                        {        
                          Song s = playList.get(index);
-                         if (s.getPlaycount() < checkedSong.getPlaycount())
+                         if (s.getPlaycount() < Song.getPlaycount())
                          {
                              System.out.print(playList.get(index+1));
                             printMenu();
@@ -232,7 +232,7 @@ public class Main {
         Scanner newadda = new Scanner(System.in);
         System.out.println("What is the song Plays you wish to add?");
         Scanner newaddp = new Scanner(System.in);
-        Song newa = new Song(newaddt.nextLine(), newadda.nextLine(), newaddp.nextDouble());
+        Song newa = new Song(newaddt.nextLine(), newadda.nextLine(), newaddp.nextInt());
         playList.add(newa);
         printList(playList);
         printMenu();
