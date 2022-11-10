@@ -44,7 +44,7 @@ public class Album {  //declare album attributes
         
     }
    //using boolean method to add a song from the arraylist to the Linkedlist
-    public boolean addSong(String title, String artist, double playcount){
+    public boolean addSong(String title, String artist, int playcount){
         if(findSong(title) == null){
             songs.add(new Song(title,artist,playcount));
             
